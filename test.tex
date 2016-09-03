@@ -1,54 +1,143 @@
-\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[none]{hyphenat}
-\usepackage[french]{babel}
-\usepackage[left=4cm,right=4cm,top=4cm,bottom=4cm]{geometry}
-\usepackage{hyperref}
-\usepackage{makeidx} 
-\usepackage{color}
-\usepackage[T1]{fontenc}
-\usepackage{listings}
-\usepackage{textcomp}
-\definecolor{lightgray}{rgb}{.9,.9,.9}
-\definecolor{darkgray}{rgb}{.4,.4,.4}
-\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
-\lstdefinelanguage{JavaScript}{
-  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-  keywordstyle=\color{blue}\bfseries,
-  ndkeywords={class, export, boolean, throw, implements, import, this},
-  ndkeywordstyle=\color{darkgray}\bfseries,
-  identifierstyle=\color{black},
-  sensitive=false,
-  comment=[l]{//},
-  morecomment=[s]{/*}{*/},
-  commentstyle=\color{purple}	tfamily,
-  stringstyle=\color{red}	tfamily,
-  morestring=[b]',
-  morestring=[b]"
-}
-\lstset{
-   language=JavaScript,
-   backgroundcolor=\color{lightgray},
-   extendedchars=true,
-   basicstyle=\footnotesize\ttfamily,
-   showstringspaces=false,
-   showspaces=false,
-   numbers=left,
-   numberstyle=\footnotesize,
-   numbersep=9pt,
-   tabsize=2,
-   breaklines=true,
-   showtabs=false,
-   captionpos=b
-}
-\makeindex
-\title{Document sans titre}
-\author{Entrez votre nom}
-\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  My documentation report
+%  Objetive: Explain what I did and how, so someone can continue with the investigation
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
+
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book
+
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+% Bibliography
+\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+
+\defbibheading{bibempty}{}
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
 \begin{document}
-\maketitle
-\newpage
-\includegraphics{57cb1fb703894.png}
-legende image
-~\\
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.25]{esahubble}}} % Image background
+\centering
+\vspace*{5cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\textbf{Clustering the interstellar medium}\\
+{\LARGE Data Mining and Machine Learning in Astronomy}\par % Book title
+\vspace*{1cm}
+{\Huge Andrea Hidalgo}\par % Author name
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head1.png} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+
+\chapter{Introduction0}
+
+\section{Motivation}\index{Motivation}
+
+\section{A bit of context}\index{Context}
+
+\subsection{References}\index{References}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2
+%----------------------------------------------------------------------------------------
+\chapterimage{head1.png}
+
+\chapter{Discovering what to do...}
+
+\section{First ideas}\index{First ideas}
+
+\subsection{Superpixel segmentation}
+
+
+
+\subsection{PCA}
+
+
+
+\section{Hypothesis}\index{Hypothesis}
+
+
+\subsection{Topics you should review}\index{Related topics}
+
+\subsection{Downloading}
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head1.png}
+\chapter{Understand your data}
+
+\section{What is an image?}
+	
+        
+	\subsection{WFC3 ERS M83 Data Products}
+  
+\section{Preprocessing your data}
+
+
+\section{Methods Selected}
+
+\subsection{ESOM, Evolving Self Organizing Maps}
+
+
+\subsubsection{Failed and still running tests: What no to do and what is still running}
+
+
+\subsubsection{Tests}
+
+
+\section{Further work}
+
+
+\subsection{Some interesting ideas}
+
+\subsection{Links you should check out}
+
+\vfill
+\textit{Wish you all the best, Andrea Hidalgo}
 \end{document}
