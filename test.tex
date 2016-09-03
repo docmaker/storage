@@ -1,143 +1,54 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  My documentation report
-%  Objetive: Explain what I did and how, so someone can continue with the investigation
-%
-% Important note:
-% Chapter heading images should have a 2:1 width:height ratio,
-% e.g. 920px width and 460px height.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
-
-\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
-
-\usepackage{xcolor} % Required for specifying colors by name
-\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book
-
-% Font Settings
-\usepackage{avant} % Use the Avantgarde font for headings
-%\usepackage{times} % Use the Times font for headings
-\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
-
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
-\usepackage[utf8]{inputenc} % Required for including letters with accents
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-
-% Bibliography
-\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
-
-\defbibheading{bibempty}{}
-
-\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
-
-\begin{document}
-
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
+\documentclass[11pt,fleqn]{book}
+						\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry}
+						\definecolor{ocre}{RGB}{52,177,201} 
+						\usepackage{avant} 
+						\usepackage{mathptmx}
+						\usepackage{microtype}
+						\usepackage[utf8]{inputenc}
+						\usepackage[T1]{fontenc} 
+						\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+						\defbibheading{bibempty}{}
+						\input{structure} 
+						\begin{document}
 \begingroup
 \thispagestyle{empty}
 \AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.25]{esahubble}}} % Image background
 \centering
 \vspace*{5cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
-\textbf{Clustering the interstellar medium}\\
-{\LARGE Data Mining and Machine Learning in Astronomy}\par % Book title
+\textbf{Carnet de bord TN09}\
 \vspace*{1cm}
-{\Huge Andrea Hidalgo}\par % Author name
+{\Huge David KONAM}\par % Author name
 \endgroup
-
-%----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
-
+\begin{document}
+\maketitle
+\newpage
 \chapterimage{head1.png} % Table of contents heading image
-
-\pagestyle{empty} % No headers
-
-\tableofcontents % Print the table of contents itself
-
-%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
-
-\pagestyle{fancy} % Print headers again
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 1
-%----------------------------------------------------------------------------------------
-
-
-\chapter{Introduction0}
-
-\section{Motivation}\index{Motivation}
-
-\section{A bit of context}\index{Context}
-
-\subsection{References}\index{References}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 2
-%----------------------------------------------------------------------------------------
+							\pagestyle{empty} % No headers
+							\tableofcontents % Print the table of contents itself
+							%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+							\pagestyle{fancy} % Print headers again
 \chapterimage{head1.png}
-
-\chapter{Discovering what to do...}
-
-\section{First ideas}\index{First ideas}
-
-\subsection{Superpixel segmentation}
-
-
-
-\subsection{PCA}
-
-
-
-\section{Hypothesis}\index{Hypothesis}
-
-
-\subsection{Topics you should review}\index{Related topics}
-
-\subsection{Downloading}
-
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 3
-%----------------------------------------------------------------------------------------
-
+								\chapter{Semaine 1}
+\begin{itemize}
+\item Accueil  et  documentation  sur  les  liaisons  de  données  tactiques
+\item Elaboration  du  sujet  de  stage
+\end{itemize}
+~\\
 \chapterimage{head1.png}
-\chapter{Understand your data}
-
-\section{What is an image?}
-	
-        
-	\subsection{WFC3 ERS M83 Data Products}
-  
-\section{Preprocessing your data}
-
-
-\section{Methods Selected}
-
-\subsection{ESOM, Evolving Self Organizing Maps}
-
-
-\subsubsection{Failed and still running tests: What no to do and what is still running}
-
-
-\subsubsection{Tests}
-
-
-\section{Further work}
-
-
-\subsection{Some interesting ideas}
-
-\subsection{Links you should check out}
-
-\vfill
-\textit{Wish you all the best, Andrea Hidalgo}
+								\chapter{Semaine 2}
+\chapterimage{head1.png}
+								\chapter{Semaine 3}
+\chapterimage{head1.png}
+								\chapter{Semaine 4}
+\chapterimage{head1.png}
+								\chapter{Semaine 5}
+\chapterimage{head1.png}
+								\chapter{Semaine 6}
+\chapterimage{head1.png}
+								\chapter{Semaine 7}
+\chapterimage{head1.png}
+								\chapter{Semaine 8}
+\chapterimage{head1.png}
+								\chapter{Semaine 9}
 \end{document}
